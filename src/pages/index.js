@@ -1,5 +1,8 @@
 import React from "react";
 import Link from "gatsby-link";
+import _ from "lodash";
+
+import productsData from "../data/products.json"
 
 const logThing = () => { console.log("try the logging") }
 
@@ -8,8 +11,15 @@ const IndexPage = () => (
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <button onClick={logThing}>log thing?</button>
-    <Link to="/page-2/">Go to page 2</Link>
+    {
+      _.map(productsData.products, (product) => {
+        return (
+          <div className="product-link">
+            <a href={`/${product.slug}`}>{product.title}</a>
+          </div>
+        )
+      })
+    }
   </div>
 )
 

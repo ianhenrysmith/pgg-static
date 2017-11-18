@@ -1,0 +1,9 @@
+{
+  "products": [
+    { "title": "Smoo 1", "slug": "smoo-1"},
+    { "title": "Smoo 2", "slug": "smoo-2"},
+    { "title": "Smoo 3", "slug": "smoo-3"},
+    { "title": "Smoo 4", "slug": "smoo-4"},
+    { "title": "Smoo 5", "slug": "smoo-5"}
+  ]
+}
