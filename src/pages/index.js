@@ -15,7 +15,7 @@ const IndexPage = () => (
       _.map(productsData.products, (product) => {
         return (
           <div className="product-link">
-            <a href={`/${product.slug}`}>{product.title}</a>
+            <Link to={`/${product.slug}`}>{product.title}</Link>
           </div>
         )
       })

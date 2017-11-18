@@ -1,6 +1,8 @@
 import * as PropTypes from "prop-types"
 import React from "react"
 
+import Link from "gatsby-link"
+
 class productPage extends React.Component {
   static propTypes = {
     pathContext: PropTypes.object
@@ -11,7 +13,7 @@ class productPage extends React.Component {
 
     return (
       <div className="product-page">
-        <a href="/">back to main</a>
+        <Link to="/">back to main</Link>
         <p>This is a productPage, here is a product:</p>
         <p>title: {product.title}</p>
         <p>slug: {product.slug}</p>
