@@ -3,15 +3,18 @@ import React from "react"
 
 class productPage extends React.Component {
   static propTypes = {
-    data: PropTypes.object
+    pathContext: PropTypes.object
   }
 
   render() {
-    console.log("render productPage", this.props)
+    const product = this.props.pathContext.product;
+
     return (
       <div className="product-page">
         <a href="/">back to main</a>
-        <p>This is a productPage</p>
+        <p>This is a productPage, here is a product:</p>
+        <p>title: {product.title}</p>
+        <p>slug: {product.slug}</p>
       </div>
     )
   }
