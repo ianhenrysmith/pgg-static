@@ -1,18 +1,44 @@
-const _ = require("lodash")
-const path = require("path")
-const slug = require("slug")
-const slash = require("slash")
-const productsData = require("./src/data/products.json")
+const _ = require(`lodash`)
+const Promise = require(`bluebird`)
+const path = require(`path`)
+const slug = require(`slug`)
+const slash = require(`slash`)
 
-exports.createPages = ({ boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
-  const productTemplate = path.resolve("src/templates/productPage.js");
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators
 
-  _.each(productsData.products, product => {
-    createPage({
-      path: `/${slug(product.slug)}/`,
-      component: slash(productTemplate),
-      context: { product }
-    })
+  return new Promise((resolve, reject) => {
+    resolve(
+      graphql(
+        `
+          {
+            allProductsJson(limit: 1000) {
+              edges {
+                node {
+                  slug
+                }
+              }
+            }
+          }
+        `
+      ).then(result => {
+        if (result.errors) {
+          reject(new Error(result.errors))
+        }
+
+        const productTemplate = path.resolve(`src/templates/productPage.js`)
+        console.log(result)
+        _.each(result.data.allProductsJson.edges, edge => {
+          createPage({
+            path: `/${slug(edge.node.slug)}/`,
+            component: slash(productTemplate),
+            context: {
+              slug: edge.node.slug,
+            },
+          })
+        })
+        return
+      })
+    )
   })
 }

@@ -1,25 +1,28 @@
 import * as PropTypes from "prop-types"
 import React from "react"
+import ProductDetail from "../components/productDetail"
 
 import Link from "gatsby-link"
 
-class productPage extends React.Component {
+class ProductPage extends React.Component {
   static propTypes = {
-    pathContext: PropTypes.object
+    data: PropTypes.shape({
+      productsJson: PropTypes.object.isRequired,
+    }),
   }
-
   render() {
-    const product = this.props.pathContext.product;
-
     return (
-      <div className="product-page">
-        <Link to="/">back to main</Link>
-        <p>This is a productPage, here is a product:</p>
-        <p>title: {product.title}</p>
-        <p>slug: {product.slug}</p>
-      </div>
+      <ProductDetail post={this.props.data.productsJson} />
     )
   }
 }
 
-export default productPage;
+export default ProductPage;
+
+export const pageQuery = graphql`
+  query ProductPage($slug: String!) {
+    ProductsJson(slug: { eq: $slug }) {
+      ...ProductDetail_details
+    }
+  }
+`

@@ -1,6 +1,21 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Pretty Good Gifts`,
   },
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: path.join(__dirname, `data`),
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`
+  ]
 }

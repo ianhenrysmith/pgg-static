@@ -1,26 +1,46 @@
 import React from "react";
-import Link from "gatsby-link";
 import _ from "lodash";
+// import * as PropTypes from "prop-types"
 
-import productsData from "../data/products.json"
+import Link from "gatsby-link";
 
-const logThing = () => { console.log("try the logging") }
+import productsData from "../../data/products.json"
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    {
-      _.map(productsData.products, (product) => {
-        return (
-          <div className="product-link">
-            <Link to={`/${product.slug}`}>{product.title}</Link>
-          </div>
-        )
-      })
+class Index extends React.Component {
+  render() {
+    let { allProductsJson } = this.props.data
+
+    const products = allProductsJson.edges.map(e => e.node)
+
+    return (
+      <div>
+        <h1>Products</h1>
+        {
+          _.map(products, (product) => {
+            return (
+              <div className="product-link">
+                <Link to={`/${product.slug}`}>{product.title}</Link>
+              </div>
+            )
+          })
+        }
+      </div>
+    )
+  }
+}
+
+export default Index
+
+export const pageQuery = graphql`
+  query AllProductsQuery {
+    allProductsJson {
+      edges {
+        node {
+          slug
+          title
+          image
+        }
+      }
     }
-  </div>
-)
-
-export default IndexPage
+  }
+`
