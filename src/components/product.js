@@ -15,15 +15,17 @@ class Product extends React.Component {
     const { smallImage, slug, title } = this.props.product
     const { small } = smallImage.childImageSharp
     return (
-      <Link to={`/${slug}/`}>
-        <div>
-          <img
-            src={small.src}
-            srcSet={small.srcSet}
-            sizes="(min-width: 960px) 292px, 33vw"/>
-        </div>
-        <div>{title}</div>
-      </Link>
+      <div className="product-tile">
+        <Link to={`/${slug}/`}>
+          <div>
+            <img
+              src={small.src}
+              srcSet={small.srcSet}
+              sizes="(min-width: 960px) 292px, 33vw"/>
+          </div>
+          <div>{title}</div>
+        </Link>
+      </div>
     )
   }
 }
