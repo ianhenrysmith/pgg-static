@@ -38,7 +38,7 @@ export const pageQuery = graphql`
         node {
           slug
           title
-          image
+          image_url
         }
       }
     }

@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "gatsby-link"
 
 class ProductDetail extends React.Component {
   render() {
@@ -9,7 +10,10 @@ class ProductDetail extends React.Component {
     } = this.props.product
 
     return (
-      <div>{title}</div>
+      <div>
+        <p>{title}</p>
+        <Link to="/">{"<<<"}Back</Link>
+      </div>
     )
   }
 }

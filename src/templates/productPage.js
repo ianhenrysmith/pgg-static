@@ -12,7 +12,7 @@ class ProductPage extends React.Component {
   }
   render() {
     return (
-      <ProductDetail post={this.props.data.productsJson} />
+      <ProductDetail product={this.props.data.productsJson} />
     )
   }
 }
@@ -21,7 +21,7 @@ export default ProductPage;
 
 export const pageQuery = graphql`
   query ProductPage($slug: String!) {
-    ProductsJson(slug: { eq: $slug }) {
+    productsJson(slug: { eq: $slug }) {
       ...ProductDetail_details
     }
   }
