@@ -6,12 +6,22 @@ class ProductDetail extends React.Component {
     const {
       title,
       slug,
-      image_url
+      image_url,
+      image_file,
+      bigImage
     } = this.props.product
+
+    const { big } = bigImage.childImageSharp
 
     return (
       <div>
         <p>{title}</p>
+        <div>
+          <img key={big.src}
+               src={big.src}
+               srcSet={big.srcSet}
+               sizes="(min-width: 640px) 640px, 100vw" />
+        </div>
         <Link to="/">{"<<<"}Back</Link>
       </div>
     )
@@ -25,5 +35,13 @@ export const productDetailFragment = graphql`
     title
     slug
     image_url
+    bigImage: image_file {
+      childImageSharp {
+        big: sizes(maxWidth: 640) {
+          src
+          srcSet
+        }
+      }
+    }
   }
 `

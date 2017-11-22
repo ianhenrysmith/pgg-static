@@ -3,8 +3,7 @@ import _ from "lodash";
 // import * as PropTypes from "prop-types"
 
 import Link from "gatsby-link";
-
-import productsData from "../../data/products.json"
+import Product from "../components/product"
 
 class Index extends React.Component {
   render() {
@@ -18,9 +17,10 @@ class Index extends React.Component {
         {
           _.map(products, (product) => {
             return (
-              <div className="product-link">
-                <Link to={`/${product.slug}`}>{product.title}</Link>
-              </div>
+              <Product
+                key={product.slug}
+                product={product}
+              />
             )
           })
         }
@@ -39,6 +39,8 @@ export const pageQuery = graphql`
           slug
           title
           image_url
+          ...Product_details
+          ...ProductDetail_details
         }
       }
     }

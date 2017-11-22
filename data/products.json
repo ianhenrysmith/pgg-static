@@ -2,26 +2,31 @@
   {
     "title": "Smoo 1",
     "slug": "smoo-1",
-    "image_url": "https://s3.amazonaws.com/pgg-dev/19599487_xl.jpg"
+    "image_url": "https://s3.amazonaws.com/pgg-dev/19599487_xl.jpg",
+    "image_file": "images/19599487_xl.jpg"
   },
   {
     "title": "Smoo 2",
     "slug": "smoo-2",
-    "image_url": "https://s3.amazonaws.com/pgg-dev/22390016_xl.jpg"
+    "image_url": "https://s3.amazonaws.com/pgg-dev/22390016_xl.jpg",
+    "image_file": "images/22390016_xl.jpg"
   },
   {
     "title": "Smoo 3",
     "slug": "smoo-3",
-    "image_url": "https://s3.amazonaws.com/pgg-dev/33400947_xl.jpg"
+    "image_url": "https://s3.amazonaws.com/pgg-dev/33400947_xl.jpg",
+    "image_file": "images/33400947_xl.jpg"
   },
   {
     "title": "Smoo 4",
     "slug": "smoo-4",
-    "image_url": "https://s3.amazonaws.com/pgg-dev/38044388_xl.jpg"
+    "image_url": "https://s3.amazonaws.com/pgg-dev/38044388_xl.jpg",
+    "image_file": "images/38044388_xl.jpg"
   },
   {
     "title": "Smoo 5",
     "slug": "smoo-5",
-    "image_url": "https://s3.amazonaws.com/pgg-dev/48244404_xl.jpg"
+    "image_url": "https://s3.amazonaws.com/pgg-dev/48244404_xl.jpg",
+    "image_file": "images/48244404_xl.jpg"
   }
 ]
