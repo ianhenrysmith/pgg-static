@@ -17,13 +17,10 @@ class Product extends React.Component {
     return (
       <div className="product-tile">
         <Link to={`/${slug}/`}>
-          <div>
-            <img
-              src={small.src}
-              srcSet={small.srcSet}
-              sizes="(min-width: 960px) 292px, 33vw"/>
+          <div className="product-image">
+            <img src={small.src} />
           </div>
-          <div>{title}</div>
+          <div className="product-title">{title}</div>
         </Link>
       </div>
     )
@@ -38,9 +35,8 @@ export const productFragment = graphql`
     title
     smallImage: image_file {
       childImageSharp {
-        small: responsiveSizes(maxWidth: 292, maxHeight: 292) {
+        small: resize(width: 480, height: 297, cropFocus: ENTROPY) {
           src
-          srcSet
         }
       }
     }
