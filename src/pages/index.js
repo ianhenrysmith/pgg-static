@@ -41,9 +41,13 @@ export const pageQuery = graphql`
     allProductsJson {
       edges {
         node {
+          amazonUrl
+          category
+          description
+          price
           slug
+          tags
           title
-          image_url
           ...Product_details
           ...ProductDetail_details
         }

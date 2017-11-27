@@ -5,7 +5,10 @@
     "image_url": "https://images-na.ssl-images-amazon.com/images/I/71%2BmfBimYVL._SL1500_.jpg",
     "image_file": "images/71+mfBimYVL._SL1500_.jpg",
     "description": "Portable pellet-powered oven that can crank out pizza pies in 10 minutes.",
-    "amazon_url": "https://www.amazon.com/Uuni-Portable-Pellet-Pizza-Stainless/dp/B06VW7YLDL/ref=pd_sbs_86_1"
+    "amazonUrl": "https://www.amazon.com/Uuni-Portable-Pellet-Pizza-Stainless/dp/B06VW7YLDL/ref=pd_sbs_86_1",
+    "category": "cooking",
+    "tags": ["cooking", "outdoors"],
+    "price": 300
   },
   {
     "title": "Smoo 1",
