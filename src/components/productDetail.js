@@ -1,12 +1,21 @@
 import React from "react"
 import Link from "gatsby-link"
 
-import { map } from "lodash"
+import { map, isEmpty } from "lodash"
 
 class ProductDetail extends React.Component {
+  renderPurchaseButton() {
+    const { amazonUrl, purchaseUrl } = this.props.product;
+
+    if (!isEmpty(amazonUrl)) {
+      return <a className="purchase-button amazon-url" href={amazonUrl}>Buy on Amazon</a>
+    } else {
+      return <a className="purchase-button generic-url" href={purchaseUrl}>View in Store</a>
+    }
+  }
+
   render() {
     const {
-      amazonUrl,
       bigImage,
       category,
       description,
@@ -20,30 +29,37 @@ class ProductDetail extends React.Component {
 
     return (
       <div className="product-page-container">
-        <p className="product-page-title">{title}</p>
-        <div className="product-page-left">
-          <img src={big.src} />
-        </div>
-        <div className="product-page-right">
-          <p className="product-page-description">
-            {description}
-          </p>
-          <div className="product-purchase-url">
-            <a href={amazonUrl}>Purchase</a>
+        <div className="product-page">
+          <div className="product-page-title-container">
+            <Link to="/" className="back-button back-button-top">{"< "}Back</Link>
+            <span className="product-page-title">
+              {title}
+            </span>
           </div>
-          <div className="product-page-category">
-            <p>category: {category}</p>
+          <div className="product-page-left">
+            <img src={big.src} />
           </div>
-          <div className="product-page-tags">
-            {
-              map(tags, (tag) => {
-                return <span className="product-tag">{tag}</span>
-              })
-            }
+          <div className="product-page-right">
+            <p className="product-page-description">
+              {description}
+            </p>
+            <div className="product-purchase-url">
+              {this.renderPurchaseButton()}
+            </div>
+            <div className="product-page-category">
+              <p>category: {category}</p>
+            </div>
+            <div className="product-page-tags">
+              {
+                map(tags, (tag) => {
+                  return <span className="product-tag">{tag}</span>
+                })
+              }
+            </div>
+            <div>
+              <Link to="/" className="back-button back-button-bottom">All Gift Ideas</Link>
+            </div>
           </div>
-        </div>
-        <div>
-          <Link to="/">{"<<<"}Back</Link>
         </div>
       </div>
     )
@@ -58,6 +74,7 @@ export const productDetailFragment = graphql`
     category
     description
     price
+    purchaseUrl
     slug
     tags
     title

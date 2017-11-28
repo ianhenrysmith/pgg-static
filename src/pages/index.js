@@ -45,6 +45,7 @@ export const pageQuery = graphql`
           category
           description
           price
+          purchaseUrl
           slug
           tags
           title
