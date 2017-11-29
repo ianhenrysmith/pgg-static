@@ -80,7 +80,7 @@ export const productDetailFragment = graphql`
     title
     bigImage: image_file {
       childImageSharp {
-        big: resize(width: 640, height: 396, cropFocus: ENTROPY) {
+        big: resize(width: 640, cropFocus: ENTROPY) {
           src
         }
       }

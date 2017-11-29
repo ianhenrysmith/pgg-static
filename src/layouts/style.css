@@ -16,6 +16,18 @@
   max-width: 1040px;
   margin: auto;
 }
+.active-filters {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.clear-active-filters {
+  background: cornflowerblue;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 5px 10px;
+}
 
 .product-tile {
   border: 5px solid #f5f5f5;

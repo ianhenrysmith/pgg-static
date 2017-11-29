@@ -6,30 +6,42 @@ import Helmet from "react-helmet"
 import "./index.css"
 import "./style.css"
 
-const Header = () => (
-  <div className="header-container">
-    <h1><Link to="/">Pretty Good Gifts</Link></h1>
-  </div>
-)
+let navCallback = () => { console.log("navCallback") }
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="Pretty Good Gifts"
-      meta={[
-        { name: "description", content: "A curated list of some pretty good gifts." },
-        { name: "keywords", content: "gifts" },
-      ]}
-    />
-    <Header />
-    <div className="body-container">
-      {children()}
-    </div>
-  </div>
-)
+class TemplateWrapper extends React.Component {
+  static childContextTypes = {
+    navCallback: PropTypes.func
+  }
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  getChildContext() {
+    return { navCallback: navCallback };
+  }
+
+  renderHeader() {
+    return (
+      <div className="header-container">
+        <h1><Link to="/" onClick={navCallback}>Pretty Good Gifts</Link></h1>
+      </div>
+    )
+  }
+
+  render() {
+    return (
+      <div>
+        <Helmet
+          title="Pretty Good Gifts"
+          meta={[
+            { name: "description", content: "A curated list of some pretty good gifts." },
+            { name: "keywords", content: "gifts" },
+          ]}
+        />
+        { this.renderHeader() }
+        <div className="body-container">
+          {this.props.children()}
+        </div>
+      </div>
+    )
+  }
 }
 
 export default TemplateWrapper

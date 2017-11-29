@@ -5,6 +5,7 @@ import { map, isEmpty } from "lodash"
 
 class Product extends React.Component {
   static propTypes = {
+    onFilterClick: PropTypes.func,
     product: PropTypes.shape({
       smallImage: PropTypes.object,
       title: PropTypes.string,
@@ -13,6 +14,7 @@ class Product extends React.Component {
   }
 
   render() {
+    console.log("context", this.context)
     const { smallImage, slug, title, tags } = this.props.product
     const { small } = smallImage.childImageSharp
     return (
@@ -25,7 +27,8 @@ class Product extends React.Component {
           <div className="product-tags">
             {
               map(tags, (tag) => {
-                return <span className="product-tag">{tag}</span>
+                const clickHandler = (event) => { this.props.onFilterClick(event, tag) }
+                return <span className="product-tag" onClick={clickHandler}>{tag}</span>
               })
             }
           </div>
