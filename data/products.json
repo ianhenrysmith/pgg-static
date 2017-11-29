@@ -1,7 +1,7 @@
 [
   {
     "title": "Uuni Wood Pellet Pizza Oven",
-    "slug": "Uuni-Portable-Pellet-Pizza-Stainless",
+    "slug": "uuni-wood-pellet-pizza-oven",
     "image_url": "https://images-na.ssl-images-amazon.com/images/I/71%2BmfBimYVL._SL1500_.jpg",
     "image_file": "images/71+mfBimYVL._SL1500_.jpg",
     "description": "Portable pellet-powered oven that can crank out pizza pies in 10 minutes.",
@@ -12,33 +12,51 @@
     "price": 300
   },
   {
-    "title": "Smoo 1",
-    "slug": "smoo-1",
-    "image_url": "https://s3.amazonaws.com/pgg-dev/19599487_xl.jpg",
-    "image_file": "images/19599487_xl.jpg"
+    "title": "Strandbeest Model Robot",
+    "slug": "strandbeest-model-robot",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/61w2259lbxL._SL1001_.jpg",
+    "image_file": "images/61w2259lbxL._SL1001_.jpg",
+    "description": "Wind-powered toy robot inspired by  Theo Jansen's Strandbeest design.",
+    "amazonUrl": "https://www.amazon.com/exec/obidos/ASIN/B00AM6W76W/ref=nosim/0sil8",
+    "purchaseUrl": "",
+    "category": "toys",
+    "tags": ["toys"],
+    "price": 15
   },
   {
-    "title": "Smoo 2",
-    "slug": "smoo-2",
-    "image_url": "https://s3.amazonaws.com/pgg-dev/22390016_xl.jpg",
-    "image_file": "images/22390016_xl.jpg"
+    "title": "The Lego Architect",
+    "slug": "the-lego-architect",
+    "image_url": "",
+    "image_file": "images/1593276133.01.S001.Lx.jpg",
+    "description": "Learn about the history of architecture, then take a shot at building your own Lego versions.",
+    "amazonUrl": "https://www.amazon.com/LEGO-Architect-Tom-Alphin/dp/1593276133",
+    "purchaseUrl": "",
+    "category": "toys",
+    "tags": ["toys", "books"],
+    "price": 20
   },
   {
-    "title": "Smoo 3",
-    "slug": "smoo-3",
-    "image_url": "https://s3.amazonaws.com/pgg-dev/33400947_xl.jpg",
-    "image_file": "images/33400947_xl.jpg"
+    "title": "Gizmos & Gadgets Kit",
+    "slug": "gizmos-and-gadgets-kit",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/81CoolnaKYL._SL1500_.jpg",
+    "image_file": "images/81CoolnaKYL._SL1500_.jpg",
+    "description": "Learn how to create inventions and problem solve.",
+    "amazonUrl": "https://www.amazon.com/exec/obidos/ASIN/B01GHPLEGU/",
+    "purchaseUrl": "",
+    "category": "toys",
+    "tags": ["toys", "educational"],
+    "price": 160
   },
   {
-    "title": "Smoo 4",
-    "slug": "smoo-4",
-    "image_url": "https://s3.amazonaws.com/pgg-dev/38044388_xl.jpg",
-    "image_file": "images/38044388_xl.jpg"
-  },
-  {
-    "title": "Smoo 5",
-    "slug": "smoo-5",
-    "image_url": "https://s3.amazonaws.com/pgg-dev/48244404_xl.jpg",
-    "image_file": "images/48244404_xl.jpg"
+    "title": "Collapsible Compact Chopsticks",
+    "slug": "collapsible-compact-chopsticks",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/61TfLw5lupL._SL1500_.jpg",
+    "image_file": "images/61TfLw5lupL._SL1500_.jpg",
+    "description": " Full-length chopsticks that collapse into each other.",
+    "amazonUrl": "https://www.amazon.com/exec/obidos/ASIN/B00AWD9LY6/",
+    "purchaseUrl": "",
+    "category": "travel",
+    "tags": ["travel", "food"],
+    "price": 16
   }
 ]

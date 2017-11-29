@@ -23,7 +23,8 @@
   margin: 5px;
   height: 310px;
   padding: 10px;
-  width: calc(33% - 20px);
+  max-width: calc(33% - 20px);
+  min-width: calc(33% - 20px);
 }
 .product-tile a {
   text-decoration: none;
@@ -111,7 +112,8 @@
 
 @media (max-width: 768px) {
   .product-tile {
-    width: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    min-width: calc(50% - 20px);
   }
 }
 
@@ -129,6 +131,8 @@
 @media (max-width: 480px) {
   .product-tile {
     height: auto;
+    max-width: initial;
+    min-width: auto;
     width: 100%;
   }
 }
