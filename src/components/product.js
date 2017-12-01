@@ -14,7 +14,6 @@ class Product extends React.Component {
   }
 
   render() {
-    console.log("context", this.context)
     const { smallImage, slug, title, tags } = this.props.product
     const { small } = smallImage.childImageSharp
     return (

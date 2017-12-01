@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { filter, includes, isEmpty, map } from "lodash";
 
 import Link from "gatsby-link";
@@ -9,14 +10,28 @@ import Product from "../components/product"
 class Index extends React.Component {
   state = {}
 
+  static contextTypes = {
+    registerCallback: PropTypes.func
+  }
+
+  componentDidMount() {
+    this.context.registerCallback((event) => {
+      this.handleClearFilter(event)
+    })
+  }
+
   handleFilterClick(event, tag) {
     this.setState({ activeFilter: tag })
     event.preventDefault();
     event.stopPropagation();
   }
 
-  handleClearFilter() {
+  handleClearFilter(event) {
     this.setState({ activeFilter: null })
+    if (!isEmpty(event)) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
   }
 
   renderProduct(product) {
@@ -24,8 +39,7 @@ class Index extends React.Component {
     return (
       <Product key={product.slug}
                onFilterClick={clickHandler}
-               product={product}
-      />
+               product={product}/>
     )
   }
 

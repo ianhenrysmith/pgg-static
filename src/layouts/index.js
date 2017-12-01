@@ -6,21 +6,31 @@ import Helmet from "react-helmet"
 import "./index.css"
 import "./style.css"
 
-let navCallback = () => { console.log("navCallback") }
+let navCallback = null;
+let registerCallback = (callback) => { navCallback = callback }
+let deregisterCallback = () => { navCallback = null }
 
 class TemplateWrapper extends React.Component {
   static childContextTypes = {
-    navCallback: PropTypes.func
+    deregisterCallback: PropTypes.func,
+    registerCallback: PropTypes.func
   }
 
   getChildContext() {
-    return { navCallback: navCallback };
+    return { registerCallback, deregisterCallback };
+  }
+
+  runCallbacks(event) {
+    if (typeof(navCallback) === "function") {
+      navCallback(event)
+    }
   }
 
   renderHeader() {
+    const clickHandler = (event) => { this.runCallbacks(event) }
     return (
       <div className="header-container">
-        <h1><Link to="/" onClick={navCallback}>Pretty Good Gifts</Link></h1>
+        <h1><Link to="/" onClick={clickHandler}>Pretty Good Gifts</Link></h1>
       </div>
     )
   }

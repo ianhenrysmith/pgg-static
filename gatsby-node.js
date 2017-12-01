@@ -27,7 +27,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         const productTemplate = path.resolve(`src/templates/productPage.js`)
-        console.log(result)
         _.each(result.data.allProductsJson.edges, edge => {
           createPage({
             path: `/${slug(edge.node.slug)}/`,

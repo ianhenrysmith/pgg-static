@@ -1,9 +1,18 @@
 import React from "react"
 import Link from "gatsby-link"
+import PropTypes from "prop-types"
 
 import { map, isEmpty } from "lodash"
 
 class ProductDetail extends React.Component {
+  static contextTypes = {
+    deregisterCallback: PropTypes.func
+  }
+
+  componentWillMount() {
+    this.context.deregisterCallback()
+  }
+
   renderPurchaseButton() {
     const { amazonUrl, purchaseUrl } = this.props.product;
 
