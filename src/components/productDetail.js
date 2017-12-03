@@ -15,12 +15,18 @@ class ProductDetail extends React.Component {
 
   renderPurchaseButton() {
     const { amazonUrl, purchaseUrl } = this.props.product;
+    const url = isEmpty(amazonUrl) ? purchaseUrl : amazonUrl;
+    const classes = isEmpty(amazonUrl) ? "purchase-button generic-url" : "purchase-button amazon-url";
+    const linkText = isEmpty(amazonUrl) ? "View in Store" : "Buy on Amazon";
 
-    if (!isEmpty(amazonUrl)) {
-      return <a className="purchase-button amazon-url" href={amazonUrl}>Buy on Amazon</a>
-    } else {
-      return <a className="purchase-button generic-url" href={purchaseUrl}>View in Store</a>
-    }
+    return (
+      <a className="purchase-button amazon-url"
+         href={ url }
+         rel="noopener noreferrer"
+         target="_blank">
+         { linkText }
+      </a>
+    )
   }
 
   render() {
