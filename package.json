@@ -13,6 +13,7 @@
     "gatsby-transformer-json": "^1.0.12",
     "gatsby-transformer-sharp": "^1.6.14",
     "gx": "^1.0.0-rc3",
+    "react-mailchimp-subscribe": "^1.0.3",
     "slash": "^1.0.0",
     "slug": "^0.9.1"
   },
