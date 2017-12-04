@@ -9,7 +9,7 @@ import Product from "../components/product"
 class Index extends React.Component {
   state = {}
 
-  componentWillMount() {
+  componentDidMount() {
     const location = get(window, "location.href", "");
     const params = location.split("?")[1];
     let activeFilter = null;
