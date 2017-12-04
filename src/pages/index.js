@@ -25,16 +25,10 @@ class Index extends React.Component {
 
   handleFilterClick(event, tag) {
     this.setState({ activeFilter: tag })
-    event.preventDefault();
-    event.stopPropagation();
   }
 
   handleClearFilter(event) {
     this.setState({ activeFilter: null })
-    if (!isEmpty(event)) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
   }
 
   renderProduct(product) {
