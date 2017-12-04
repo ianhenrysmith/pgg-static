@@ -5,14 +5,6 @@ import PropTypes from "prop-types"
 import { map, isEmpty } from "lodash"
 
 class ProductDetail extends React.Component {
-  static contextTypes = {
-    deregisterCallback: PropTypes.func
-  }
-
-  componentWillMount() {
-    this.context.deregisterCallback()
-  }
-
   renderPurchaseButton() {
     const { amazonUrl, purchaseUrl } = this.props.product;
     const url = isEmpty(amazonUrl) ? purchaseUrl : amazonUrl;
@@ -67,7 +59,12 @@ class ProductDetail extends React.Component {
             <div className="product-page-tags">
               {
                 map(tags, (tag) => {
-                  return <span className="product-tag">{tag}</span>
+                  return (
+                    <Link className="product-tag"
+                          to={ `/?activeFilter=${tag}` }>
+                      {tag}
+                    </Link>
+                  )
                 })
               }
             </div>

@@ -18,7 +18,7 @@ class Product extends React.Component {
     const { small } = smallImage.childImageSharp
     return (
       <div className="product-tile">
-        <Link to={`/${slug}/`}>
+        <Link to={ `/${slug}` }>
           <div className="product-image">
             <img src={small.src} />
           </div>
@@ -27,7 +27,13 @@ class Product extends React.Component {
             {
               map(tags, (tag) => {
                 const clickHandler = (event) => { this.props.onFilterClick(event, tag) }
-                return <span className="product-tag" onClick={clickHandler}>{tag}</span>
+                return (
+                  <Link className="product-tag"
+                        to={ `/?activeFilter=${tag}` }
+                        onClick={clickHandler}>
+                        {tag}
+                  </Link>
+                )
               })
             }
           </div>

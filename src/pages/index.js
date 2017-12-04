@@ -1,23 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { filter, includes, isEmpty, map } from "lodash";
+import { filter, includes, isEmpty, map, get } from "lodash";
 
 import Link from "gatsby-link";
-import Gx from "gx";
 
 import Product from "../components/product"
 
 class Index extends React.Component {
   state = {}
 
-  static contextTypes = {
-    registerCallback: PropTypes.func
-  }
+  componentWillMount() {
+    const location = get(window, "location.href", "");
+    const params = location.split("?")[1];
+    let activeFilter = null;
 
-  componentDidMount() {
-    this.context.registerCallback((event) => {
-      this.handleClearFilter(event)
-    })
+    if (!isEmpty(params)) {
+      const filterParam = params.split("activeFilter=")[1];
+      if (!isEmpty(filterParam)) {
+        activeFilter = filterParam;
+      }
+    }
+    this.setState({ activeFilter });
   }
 
   handleFilterClick(event, tag) {
@@ -51,9 +54,11 @@ class Index extends React.Component {
           <span>
             showing gift ideas in "{this.state.activeFilter}"
           </span>
-          <span className="clear-active-filters" onClick={clickHandler}>
+          <Link className="clear-active-filters"
+                onClick={clickHandler}
+                to={ "/" }>
             Show all gift ideas
-          </span>
+          </Link>
         </div>
       )
     } else {
