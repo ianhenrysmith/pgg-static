@@ -1,10 +1,16 @@
 import React from "react"
-import Link from "gatsby-link"
 import PropTypes from "prop-types"
+
+import Header from "./header";
+import Link from "gatsby-link";
 
 import { map, isEmpty } from "lodash"
 
 class ProductDetail extends React.Component {
+  renderHeader() {
+    return <Header />
+  }
+
   renderPurchaseButton() {
     const { amazonUrl, purchaseUrl } = this.props.product;
     const url = isEmpty(amazonUrl) ? purchaseUrl : amazonUrl;
@@ -35,41 +41,44 @@ class ProductDetail extends React.Component {
     const { big } = bigImage.childImageSharp
 
     return (
-      <div className="product-page-container">
-        <div className="product-page">
-          <div className="product-page-title-container">
-            <Link to="/" className="back-button back-button-top">{"< "}Back</Link>
-            <span className="product-page-title">
-              {title}
-            </span>
-          </div>
-          <div className="product-page-left">
-            <img src={big.src} />
-          </div>
-          <div className="product-page-right">
-            <p className="product-page-description">
-              {description}
-            </p>
-            <div className="product-purchase-url">
-              {this.renderPurchaseButton()}
+      <div>
+        { this.renderHeader() }
+        <div className="product-page-container">
+          <div className="product-page">
+            <div className="product-page-title-container">
+              <Link to="/" className="back-button back-button-top">{"< "}Back</Link>
+              <span className="product-page-title">
+                {title}
+              </span>
             </div>
-            <div className="product-page-category">
-              <p>category: {category}</p>
+            <div className="product-page-left">
+              <img src={big.src} />
             </div>
-            <div className="product-page-tags">
-              {
-                map(tags, (tag) => {
-                  return (
-                    <Link className="product-tag"
-                          to={ `/?activeFilter=${tag}` }>
-                      {tag}
-                    </Link>
-                  )
-                })
-              }
-            </div>
-            <div>
-              <Link to="/" className="back-button back-button-bottom">All Gift Ideas</Link>
+            <div className="product-page-right">
+              <p className="product-page-description">
+                {description}
+              </p>
+              <div className="product-purchase-url">
+                {this.renderPurchaseButton()}
+              </div>
+              <div className="product-page-category">
+                <p>category: {category}</p>
+              </div>
+              <div className="product-page-tags">
+                {
+                  map(tags, (tag) => {
+                    return (
+                      <Link className="product-tag"
+                            to={ `/?activeFilter=${tag}` }>
+                        {tag}
+                      </Link>
+                    )
+                  })
+                }
+              </div>
+              <div>
+                <Link to="/" className="back-button back-button-bottom">All Gift Ideas</Link>
+              </div>
             </div>
           </div>
         </div>

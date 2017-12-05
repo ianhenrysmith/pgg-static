@@ -8,7 +8,7 @@ class ProductPage extends React.Component {
   static propTypes = {
     data: PropTypes.shape({
       productsJson: PropTypes.object.isRequired,
-    }),
+    })
   }
   render() {
     return (

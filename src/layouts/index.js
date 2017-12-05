@@ -7,35 +7,7 @@ import SubscribeForm from "react-mailchimp-subscribe";
 import "./index.css"
 import "./style.css"
 
-let navCallback = null;
-let registerCallback = (callback) => { navCallback = callback }
-let deregisterCallback = () => { navCallback = null }
-
 class TemplateWrapper extends React.Component {
-  static childContextTypes = {
-    deregisterCallback: PropTypes.func,
-    registerCallback: PropTypes.func
-  }
-
-  getChildContext() {
-    return { registerCallback, deregisterCallback };
-  }
-
-  runCallbacks(event) {
-    if (typeof(navCallback) === "function") {
-      navCallback(event)
-    }
-  }
-
-  renderHeader() {
-    const clickHandler = (event) => { this.runCallbacks(event) }
-    return (
-      <div className="header-container">
-        <h1><Link to="/" onClick={clickHandler}>Pretty Good Gifts</Link></h1>
-      </div>
-    )
-  }
-
   renderSubscribeForm() {
     const formProps = {
       action: "https://gifts.us17.list-manage.com/subscribe/post?u=11ab56c29bb4a46b3d75765e9&amp;id=257208557b",
@@ -75,10 +47,7 @@ class TemplateWrapper extends React.Component {
             { name: "keywords", content: "gifts" },
           ]}
         />
-        { this.renderHeader() }
-        <div className="body-container">
-          {this.props.children()}
-        </div>
+        {this.props.children()}
         <div className="footer-container">
           {this.renderSubscribeForm()}
         </div>

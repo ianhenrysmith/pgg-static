@@ -3,15 +3,16 @@ import PropTypes from "prop-types";
 import { filter, includes, isEmpty, map, get } from "lodash";
 
 import Link from "gatsby-link";
+import Header from "../components/header";
 
-import Product from "../components/product"
+import Product from "../components/product";
 
 class Index extends React.Component {
-  state = {}
+  state = this.getFilterState()
 
-  componentDidMount() {
-    const location = get(window, "location.href", "");
-    const params = location.split("?")[1];
+  getFilterState() {
+    const search = this.props.location.search
+    const params = search.split("?")[1];
     let activeFilter = null;
 
     if (!isEmpty(params)) {
@@ -20,15 +21,20 @@ class Index extends React.Component {
         activeFilter = filterParam;
       }
     }
-    this.setState({ activeFilter });
+    return { activeFilter };
   }
 
-  handleFilterClick(event, tag) {
+  handleFilterClick(_, tag) {
     this.setState({ activeFilter: tag })
   }
 
-  handleClearFilter(event) {
+  handleClearFilter() {
     this.setState({ activeFilter: null })
+  }
+
+  renderHeader() {
+    const clickHandler = () => { this.handleClearFilter() }
+    return <Header onClick={clickHandler} />
   }
 
   renderProduct(product) {
@@ -73,11 +79,14 @@ class Index extends React.Component {
 
     return (
       <div>
-        <div className="product-tiles">
-          { this.renderActiveFilter() }
-          {
-            map(products, (product) => { return this.renderProduct(product) })
-          }
+        { this.renderHeader() }
+        <div className="body-container">
+          <div className="product-tiles">
+            { this.renderActiveFilter() }
+            {
+              map(products, (product) => { return this.renderProduct(product) })
+            }
+          </div>
         </div>
       </div>
     )
