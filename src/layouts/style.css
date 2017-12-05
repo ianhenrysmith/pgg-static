@@ -85,7 +85,7 @@
 }
 
 .product-page-container {
-  margin: auto;
+  margin: auto auto 40px auto;
   max-width: 1040px;
 }
 .product-page {
