@@ -10,11 +10,19 @@ import Product from "../components/product";
 const PAGE_SIZE = 30;
 
 class Index extends React.Component {
-  state = {
-    visibleProductCount: PAGE_SIZE,
-    allProductCount: this.props.data.allProductsJson.edges.length,
-    ...this.getFilterState(),
-    ...this.getProducts(PAGE_SIZE)
+  state = this.getInitialState()
+
+  getInitialState() {
+    const activeFilter = this.getFilterState();
+    const products = this.getProducts(PAGE_SIZE, activeFilter);
+    const allProductCount = this.getProducts(-1, activeFilter).length;
+
+    return ({
+      visibleProductCount: PAGE_SIZE,
+      allProductCount,
+      activeFilter,
+      products
+    })
   }
 
   getFilterState() {
@@ -28,13 +36,11 @@ class Index extends React.Component {
         activeFilter = filterParam;
       }
     }
-    return { activeFilter };
+    return activeFilter;
   }
 
-  getProducts(visibleProductCount) {
+  getProducts(productLimit, activeFilter) {
     let products = this.props.data.allProductsJson.edges.map(e => e.node);
-    const activeFilter = get(this, "state.activeFilter");
-    // const visibleProductCount = get(this, "state.visibleProductCount", PAGE_SIZE);
 
     // filter
     if (!isEmpty(activeFilter)) {
@@ -43,22 +49,41 @@ class Index extends React.Component {
       })
     }
     // paginate
-    return { products: take(products, visibleProductCount) };
+    if (productLimit > 0) {
+      return take(products, productLimit);
+    } else {
+      return products;
+    }
   }
 
   handleFilterClick(_, tag) {
-    this.setState({ activeFilter: tag })
+    const products = this.getProducts(PAGE_SIZE, tag);
+
+    this.setState({
+      activeFilter: tag,
+      allProductCount: this.getProducts(-1, tag).length,
+      products: products,
+      visibleProductCount: products.length
+    })
   }
 
   handleClearFilter() {
-    this.setState({ activeFilter: null })
+    const products = this.getProducts(PAGE_SIZE, null);
+
+    this.setState({
+      activeFilter: null,
+      allProductCount: this.getProducts(-1, null).length,
+      products: products,
+      visibleProductCount: products.length
+    })
   }
 
   handleShowMore() {
     const visibleProductCount = this.state.visibleProductCount + PAGE_SIZE;
+
     this.setState({
-      visibleProductCount,
-      ...this.getProducts(visibleProductCount)
+      products: this.getProducts(visibleProductCount, this.state.activeFilter),
+      visibleProductCount
     });
   }
 
@@ -76,11 +101,11 @@ class Index extends React.Component {
     )
   }
 
-  renderActiveFilter() {
+  renderActiveFilter(position) {
     if (!isEmpty(this.state.activeFilter)) {
       const clickHandler = () => { this.handleClearFilter() }
       return (
-        <div className="active-filters">
+        <div className={`active-filters-${position}`}>
           <span>
             showing gift ideas in "{this.state.activeFilter}"
           </span>
@@ -99,7 +124,13 @@ class Index extends React.Component {
   renderShowMore() {
     if (this.state.visibleProductCount < this.state.allProductCount) {
       const clickHandler = () => { this.handleShowMore() }
-      return <div className="show-more" onClick={ clickHandler }>Show More</div> 
+      return (
+        <div className="show-more-container">
+          <div className="show-more-button" onClick={ clickHandler }>
+            Show More
+          </div>
+        </div>
+      )
     }
   }
 
@@ -115,11 +146,11 @@ class Index extends React.Component {
         { this.renderHeader() }
         <div className="body-container">
           <div className="product-tiles">
-            { this.renderActiveFilter() }
+            { this.renderActiveFilter("top") }
             {
               map(products, (product) => { return this.renderProduct(product) })
             }
-            { this.renderActiveFilter() }
+            { this.renderActiveFilter("bottom") }
           </div>
           { this.renderShowMore() }
         </div>
