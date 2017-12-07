@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { filter, get, includes, isEmpty, map, take } from "lodash";
+import { chunk, filter, get, includes, isEmpty, map, take } from "lodash";
 
 import Link from "gatsby-link";
-import Header from "../components/header";
 
+import Header from "../components/header";
 import Product from "../components/product";
+import SubscribeArea from "../components/subscribeArea";
 
 const PAGE_SIZE = 30;
 
@@ -134,6 +135,21 @@ class Index extends React.Component {
     }
   }
 
+  renderProductChunk(productChunk) {
+    return (
+      <div className="product-chunk">
+        <div className="product-tiles">
+          {
+            map(productChunk, (product) => {
+              return this.renderProduct(product)
+            })
+          }
+        </div>
+        <SubscribeArea />
+      </div>
+    )
+  }
+
   render() {
     const products = this.state.products;
 
@@ -141,14 +157,18 @@ class Index extends React.Component {
       window.location = "/"
     }
 
+    const productChunks = chunk(products, PAGE_SIZE);
+
     return (
       <div>
         { this.renderHeader() }
         <div className="body-container">
-          <div className="product-tiles">
+          <div>
             { this.renderActiveFilter("top") }
             {
-              map(products, (product) => { return this.renderProduct(product) })
+              map(productChunks, (productChunk) => {
+                return (this.renderProductChunk(productChunk))
+              })
             }
             { this.renderActiveFilter("bottom") }
           </div>
