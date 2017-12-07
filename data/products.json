@@ -427,8 +427,8 @@
     "description": "Play as travelers exploring Japan's East Road.",
     "amazonUrl": "https://www.amazon.com/Passport-Game-Studios-FNF001-Tokaido/dp/B00ADNLT8G",
     "purchaseUrl": "",
-    "category": "board games",
-    "tags": ["board games", "family"],
+    "category": "games",
+    "tags": ["games", "family"],
     "price": 38
   },
   {
@@ -439,8 +439,8 @@
     "description": "Imaginative storytelling party game. For fans of Pictionary.",
     "amazonUrl": "https://www.amazon.com/Dixit-Cover-Art-May-Vary/dp/2914849656",
     "purchaseUrl": "",
-    "category": "board games",
-    "tags": ["board games", "family"],
+    "category": "games",
+    "tags": ["games", "family"],
     "price": 38
   },
   {
@@ -451,8 +451,8 @@
     "description": "Compete to build the wonders of the ancient world.",
     "amazonUrl": "https://www.amazon.com/Asmodee-SEV-EN01ASM-7-Wonders/dp/B0043KJW5M",
     "purchaseUrl": "",
-    "category": "board games",
-    "tags": ["board games", "family"],
+    "category": "games",
+    "tags": ["games", "family"],
     "price": 40
   },
   {
@@ -490,5 +490,113 @@
     "category": "fitness",
     "tags": ["fitness"],
     "price": 300
+  },
+  {
+    "title": "Kammok Camping Hammock",
+    "slug": "kammok-camping-hammock",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/31VonwClegL.jpg",
+    "image_file": "images/31VonwClegL.jpg",
+    "description": "Comfy hammock for use in the backyard, or a hike, or wherever.",
+    "amazonUrl": "https://www.amazon.com/Kammok-Wallaby-Travel-Hammock-Roo/dp/B01LRB21Z2",
+    "purchaseUrl": "",
+    "category": "outdoors",
+    "tags": ["outdoors", "sleep"],
+    "price": 46
+  },
+  {
+    "title": "Nikka Coffey Gin",
+    "slug": "nikka-coffey-gin",
+    "image_url": "http://cdn2.bigcommerce.com/server2800/a04d0/products/13547/images/14454/nikka-coffey-gin__50942.1512224940.1280.1280.jpg",
+    "image_file": "images/nikka-coffey-gin__50942.1512224940.1280.1280.jpg",
+    "description": "Japanese gin so much better than the stuff your dad drinks. Features yuzu and pepper flavors.",
+    "amazonUrl": "",
+    "purchaseUrl": "http://www.shopwinedirect.com/nikka-coffey-gin-750ml.html",
+    "category": "drinks",
+    "tags": ["drinks"],
+    "price": 44
+  },
+  {
+    "title": "Kombucha Brewing Kit",
+    "slug": "kombucha-brewing-kit",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/91l45%2BTQinL._SL1500_.jpg",
+    "image_file": "images/91l45+TQinL._SL1500_.jpg",
+    "description": "Probiotic? More like Grow-biotic.",
+    "amazonUrl": "https://www.amazon.com/Kombucha-Brewing-Organic-Scoby-Temperature/dp/B00LW7OR4A/",
+    "purchaseUrl": "",
+    "category": "drinks",
+    "tags": ["drinks", "DIY"],
+    "price": 50
+  },
+  {
+    "title": "Everything Mill",
+    "slug": "everything-mill",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/51TtobKvumL._SL1200_.jpg",
+    "image_file": "images/51TtobKvumL._SL1200_.jpg",
+    "description": "For grinding anything from grains to spices.",
+    "amazonUrl": "https://www.amazon.com/Kyocera-Advanced-Adjustable-Everything-Mill-Black/dp/B001UHNLDU",
+    "purchaseUrl": "",
+    "category": "cooking",
+    "tags": ["cooking", "kitchen"],
+    "price": 18
+  },
+  {
+    "title": "Saatchi Art Prints",
+    "slug": "saatchi-art-prints",
+    "image_url": "http://www.trbimg.com/img-59fa40df/turbine/la-1509572825-h4dmgjy9of-snap-image",
+    "image_file": "images/la-1509572825-h4dmgjy9of-snap-image.jpg",
+    "description": "Every wall needs a good print.",
+    "amazonUrl": "",
+    "purchaseUrl": "https://limited.saatchiart.com/",
+    "category": "home",
+    "tags": ["prints", "art", "home"],
+    "price": 150
+  },
+  {
+    "title": "Felco Hand Pruner",
+    "slug": "felco-hand-pruner",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/712JCz1%2BglL._SL1181_.jpg",
+    "image_file": "images/712JCz1+glL._SL1181_.jpg",
+    "description": "Durable Swiss-made gardening pruners.",
+    "amazonUrl": "https://www.amazon.com/Felco-F-2-Classic-Manual-Pruner/dp/B00023RYS6",
+    "purchaseUrl": "",
+    "category": "gardening",
+    "tags": ["gardening", "home"],
+    "price": 48
+  },
+  {
+    "title": "Hori Hori Garden Knife",
+    "slug": "hori-hori-garden-knife",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/71qbRYxuD0L._SL1200_.jpg",
+    "image_file": "images/71qbRYxuD0L._SL1200_.jpg",
+    "description": "Clever knife for pruning and planting. No stabbing plz.",
+    "amazonUrl": "https://www.amazon.com/Garden-Diamond-Sharpening-Thickest-Leather/dp/B016BBM6FI",
+    "purchaseUrl": "",
+    "category": "gardening",
+    "tags": ["gardening", "home"],
+    "price": 29
+  },
+  {
+    "title": "Utter Nonsense",
+    "slug": "utter-nonsense",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/91xubzZp-BL._SL1500_.jpg",
+    "image_file": "images/91xubzZp-BL._SL1500_.jpg",
+    "description": "Combine silly accents with even sillier phrases to create sayings that are just ridiculous.",
+    "amazonUrl": "https://www.amazon.com/Utter-Nonsense-FAMILY-ages/dp/B074DPMSKJ",
+    "purchaseUrl": "",
+    "category": "games",
+    "tags": ["games", "family"],
+    "price": 35
+  },
+  {
+    "title": "Lavender Grow Kit",
+    "slug": "lavender-grow-kit",
+    "image_url": "https://cdn.shopify.com/s/files/1/0909/2088/products/WP_springflower_1024x1024.jpg",
+    "image_file": "images/WP_springflower_1024x1024.jpg",
+    "description": "Lavender makes everything smell good and plants make a place look good.",
+    "amazonUrl": "",
+    "purchaseUrl": "https://www.modsprout.com/products/waxed-planter-lavender",
+    "category": "home",
+    "tags": ["gardening", "home"],
+    "price": 17
   }
 ]

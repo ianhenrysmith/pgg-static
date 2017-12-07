@@ -19,7 +19,7 @@ The format for a product's data is:
 {
   "title": "Product name (not too long plz)",
   "slug": "some-valid-url-format",
-  "image_url": "this isn't actually used",
+  "image_url": "full url of the image in case we need to fetch it",
   "image_file": "images/image-filename.png",
   "description": "One to three sentence description of the product",
   "amazonUrl": "url of where the product is available on Amazon",
