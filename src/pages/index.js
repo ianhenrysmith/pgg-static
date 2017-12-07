@@ -1,14 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { filter, includes, isEmpty, map, get } from "lodash";
+import { filter, get, includes, isEmpty, map, take } from "lodash";
 
 import Link from "gatsby-link";
 import Header from "../components/header";
 
 import Product from "../components/product";
 
+const PAGE_SIZE = 30;
+
 class Index extends React.Component {
-  state = this.getFilterState()
+  state = {
+    visibleProductCount: PAGE_SIZE,
+    allProductCount: this.props.data.allProductsJson.edges.length,
+    ...this.getFilterState(),
+    ...this.getProducts(PAGE_SIZE)
+  }
 
   getFilterState() {
     const search = this.props.location.search
@@ -24,12 +31,35 @@ class Index extends React.Component {
     return { activeFilter };
   }
 
+  getProducts(visibleProductCount) {
+    let products = this.props.data.allProductsJson.edges.map(e => e.node);
+    const activeFilter = get(this, "state.activeFilter");
+    // const visibleProductCount = get(this, "state.visibleProductCount", PAGE_SIZE);
+
+    // filter
+    if (!isEmpty(activeFilter)) {
+      products = filter(products, (product) => {
+        return includes(product.tags, activeFilter)
+      })
+    }
+    // paginate
+    return { products: take(products, visibleProductCount) };
+  }
+
   handleFilterClick(_, tag) {
     this.setState({ activeFilter: tag })
   }
 
   handleClearFilter() {
     this.setState({ activeFilter: null })
+  }
+
+  handleShowMore() {
+    const visibleProductCount = this.state.visibleProductCount + PAGE_SIZE;
+    this.setState({
+      visibleProductCount,
+      ...this.getProducts(visibleProductCount)
+    });
   }
 
   renderHeader() {
@@ -66,15 +96,18 @@ class Index extends React.Component {
     }
   }
 
+  renderShowMore() {
+    if (this.state.visibleProductCount < this.state.allProductCount) {
+      const clickHandler = () => { this.handleShowMore() }
+      return <div className="show-more" onClick={ clickHandler }>Show More</div> 
+    }
+  }
+
   render() {
-    let { allProductsJson } = this.props.data
+    const products = this.state.products;
 
-    let products = allProductsJson.edges.map(e => e.node)
-
-    if (!isEmpty(this.state.activeFilter)) {
-      products = filter(products, (product) => {
-        return includes(product.tags, this.state.activeFilter)
-      })
+    if (isEmpty(products)) {
+      window.location = "/"
     }
 
     return (
@@ -86,7 +119,9 @@ class Index extends React.Component {
             {
               map(products, (product) => { return this.renderProduct(product) })
             }
+            { this.renderActiveFilter() }
           </div>
+          { this.renderShowMore() }
         </div>
       </div>
     )
