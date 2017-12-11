@@ -1,6 +1,6 @@
 [
   {
-    "title": "Uuni Wood Pellet Pizza Oven",
+    "title": "Uuni Wood Fire Pizza Oven",
     "slug": "uuni-wood-pellet-pizza-oven",
     "image_url": "https://images-na.ssl-images-amazon.com/images/I/71%2BmfBimYVL._SL1500_.jpg",
     "image_file": "images/71+mfBimYVL._SL1500_.jpg",
@@ -10,18 +10,6 @@
     "category": "cooking",
     "tags": ["cooking", "outdoors"],
     "price": 300
-  },
-  {
-    "title": "Strandbeest Model Robot",
-    "slug": "strandbeest-model-robot",
-    "image_url": "https://images-na.ssl-images-amazon.com/images/I/61w2259lbxL._SL1001_.jpg",
-    "image_file": "images/61w2259lbxL._SL1001_.jpg",
-    "description": "Wind-powered toy robot inspired by  Theo Jansen's Strandbeest design.",
-    "amazonUrl": "https://www.amazon.com/exec/obidos/ASIN/B00AM6W76W/ref=nosim/0sil8",
-    "purchaseUrl": "",
-    "category": "toys",
-    "tags": ["toys"],
-    "price": 15
   },
   {
     "title": "The Lego Architect",
@@ -34,54 +22,6 @@
     "category": "toys",
     "tags": ["toys", "books"],
     "price": 20
-  },
-  {
-    "title": "Gizmos & Gadgets Kit",
-    "slug": "gizmos-and-gadgets-kit",
-    "image_url": "https://images-na.ssl-images-amazon.com/images/I/81CoolnaKYL._SL1500_.jpg",
-    "image_file": "images/81CoolnaKYL._SL1500_.jpg",
-    "description": "Learn how to create inventions and problem solve.",
-    "amazonUrl": "https://www.amazon.com/exec/obidos/ASIN/B01GHPLEGU/",
-    "purchaseUrl": "",
-    "category": "toys",
-    "tags": ["toys", "educational"],
-    "price": 160
-  },
-  {
-    "title": "Collapsible Compact Chopsticks",
-    "slug": "collapsible-compact-chopsticks",
-    "image_url": "https://images-na.ssl-images-amazon.com/images/I/61TfLw5lupL._SL1500_.jpg",
-    "image_file": "images/61TfLw5lupL._SL1500_.jpg",
-    "description": " Full-length chopsticks that collapse into each other.",
-    "amazonUrl": "https://www.amazon.com/exec/obidos/ASIN/B00AWD9LY6/",
-    "purchaseUrl": "",
-    "category": "travel",
-    "tags": ["travel", "food"],
-    "price": 16
-  },
-  {
-    "title": "Best Ice Cube Trays",
-    "slug": "best-ice-cube-trays",
-    "image_url": "https://images-na.ssl-images-amazon.com/images/I/71gChwtC5kL._SL1500_.jpg",
-    "image_file": "images/71gChwtC5kL._SL1500_.jpg",
-    "description": "If you make cocktails at home, you need a good big silicone ice cube tray.",
-    "amazonUrl": "https://www.amazon.com/gp/product/B00R03ZCZS",
-    "purchaseUrl": "",
-    "category": "food",
-    "tags": ["drinks", "food"],
-    "price": 10
-  },
-  {
-    "title": "Dunder Mifflin Hoodie",
-    "slug": "dunder-mifflin-hoodie",
-    "image_url": "https://images-na.ssl-images-amazon.com/images/I/61SzaQVsgVL._UY679_.jpg",
-    "image_file": "images/61SzaQVsgVL._UY679_.jpg",
-    "description": "Show your love of The Office in a way that will also keep you warm.",
-    "amazonUrl": "https://www.amazon.com/gp/product/B00M6FPMOG",
-    "purchaseUrl": "",
-    "category": "clothes",
-    "tags": ["tv/movies", "clothes"],
-    "price": 33
   },
   {
     "title": "Nintendo Switch",
@@ -108,19 +48,7 @@
     "price": 23
   },
   {
-    "title": "Furbo Dog Camera",
-    "slug": "furbo-dog-camera",
-    "image_url": "https://images-na.ssl-images-amazon.com/images/I/6195c4zLayL._SL1000_.jpg",
-    "image_file": "images/6195c4zLayL._SL1000_.jpg",
-    "description": "Check in on your dog, toss them a treat.",
-    "amazonUrl": "https://www.amazon.com/gp/product/B01FXC7JWQ",
-    "purchaseUrl": "",
-    "category": "pets",
-    "tags": ["pets", "dogs"],
-    "price": 200
-  },
-  {
-    "title": "MEE audio M6 PRO Headphones",
+    "title": "Mee M6 Headphones",
     "slug": "mee-audio-m6-pro-headphones",
     "image_url": "https://images-na.ssl-images-amazon.com/images/I/71sg1QBgQlL._SL1500_.jpg",
     "image_file": "images/71sg1QBgQlL._SL1500_.jpg",
@@ -144,19 +72,7 @@
     "price": 90
   },
   {
-    "title": "FURminator Deshedding Tool",
-    "slug": "furminator-deshedding-tool",
-    "image_url": "https://images-na.ssl-images-amazon.com/images/I/71f2wfqeMDL._SL1500_.jpg",
-    "image_file": "images/71f2wfqeMDL._SL1500_.jpg",
-    "description": "Reduce shedding by getting rid of loose kitty hair.",
-    "amazonUrl": "https://www.amazon.com/gp/product/B00M4PVHH4",
-    "purchaseUrl": "",
-    "category": "pets",
-    "tags": ["cats", "pets"],
-    "price": 45
-  },
-  {
-    "title": "Woozu iPhone Wallet Case",
+    "title": "iPhone Wallet Case",
     "slug": "woozu-iphone-wallet-case",
     "image_url": "https://images-na.ssl-images-amazon.com/images/I/71GQPRqXwpL._SL1005_.jpg",
     "image_file": "images/71GQPRqXwpL._SL1005_.jpg",
@@ -166,6 +82,18 @@
     "category": "electronics",
     "tags": ["accessories", "electronics"],
     "price": 11
+  },
+  {
+    "title": "Lavender Grow Kit",
+    "slug": "lavender-grow-kit",
+    "image_url": "https://cdn.shopify.com/s/files/1/0909/2088/products/WP_springflower_1024x1024.jpg",
+    "image_file": "images/WP_springflower_1024x1024.jpg",
+    "description": "Lavender makes everything smell good and plants make a place look good.",
+    "amazonUrl": "",
+    "purchaseUrl": "https://www.modsprout.com/products/waxed-planter-lavender",
+    "category": "home",
+    "tags": ["gardening", "home"],
+    "price": 17
   },
   {
     "title": "Klipsch Reference X6i In-Ear Headphones",
@@ -190,6 +118,30 @@
     "category": "kitchen",
     "tags": ["design", "kitchen"],
     "price": 70
+  },
+  {
+    "title": "Gizmos & Gadgets Kit",
+    "slug": "gizmos-and-gadgets-kit",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/81CoolnaKYL._SL1500_.jpg",
+    "image_file": "images/81CoolnaKYL._SL1500_.jpg",
+    "description": "Learn how to create inventions and problem solve.",
+    "amazonUrl": "https://www.amazon.com/exec/obidos/ASIN/B01GHPLEGU/",
+    "purchaseUrl": "",
+    "category": "toys",
+    "tags": ["toys", "educational"],
+    "price": 160
+  },
+  {
+    "title": "Strandbeest Model Robot",
+    "slug": "strandbeest-model-robot",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/61w2259lbxL._SL1001_.jpg",
+    "image_file": "images/61w2259lbxL._SL1001_.jpg",
+    "description": "Wind-powered toy robot inspired by  Theo Jansen's Strandbeest design.",
+    "amazonUrl": "https://www.amazon.com/exec/obidos/ASIN/B00AM6W76W/ref=nosim/0sil8",
+    "purchaseUrl": "",
+    "category": "toys",
+    "tags": ["toys"],
+    "price": 15
   },
   {
     "title": "Harry Potter Page to Screen",
@@ -228,7 +180,19 @@
     "price": 98
   },
   {
-    "title": "Kendra Scott Birthstone Necklace",
+    "title": "Hori Hori Garden Knife",
+    "slug": "hori-hori-garden-knife",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/71qbRYxuD0L._SL1200_.jpg",
+    "image_file": "images/71qbRYxuD0L._SL1200_.jpg",
+    "description": "Clever knife for pruning and planting. No stabbing plz.",
+    "amazonUrl": "https://www.amazon.com/Garden-Diamond-Sharpening-Thickest-Leather/dp/B016BBM6FI",
+    "purchaseUrl": "",
+    "category": "gardening",
+    "tags": ["gardening", "home"],
+    "price": 29
+  },
+  {
+    "title": "Birthstone Necklace",
     "slug": "kendra-scott-birthstone-necklace",
     "image_url": "https://img.buzzfeed.com/buzzfeed-static/static/2017-11/28/14/asset/buzzfeed-prod-fastlane-01/sub-buzz-12190-1511896785-8.jpg",
     "image_file": "images/sub-buzz-12190-1511896785-8.jpg",
@@ -240,7 +204,7 @@
     "price": 50
   },
   {
-    "title": "Instax Mini 90 Instant Film Camera",
+    "title": "Instax Instant Film Camera",
     "slug": "fujifilm-instax-mini-90-instant-film-camera",
     "image_url": "https://images-na.ssl-images-amazon.com/images/I/91-PbNUAzmL._SL1500_.jpg",
     "image_file": "images/91-PbNUAzmL._SL1500_.jpg",
@@ -312,7 +276,7 @@
     "price": 28
   },
   {
-    "title": "Umbra Trigon Metal Bulletin Board",
+    "title": "Umbra Metal Bulletin Board",
     "slug": "umbra-trigon-meta-bulletin-board",
     "image_url": "https://images-na.ssl-images-amazon.com/images/I/91hSqNer4QL._SL1500_.jpg",
     "image_file": "images/91hSqNer4QL._SL1500_.jpg",
@@ -334,6 +298,18 @@
     "category": "accessories",
     "tags": ["fitness", "accessories"],
     "price": 35
+  },
+  {
+    "title": "Dunder Mifflin Hoodie",
+    "slug": "dunder-mifflin-hoodie",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/61SzaQVsgVL._UY679_.jpg",
+    "image_file": "images/61SzaQVsgVL._UY679_.jpg",
+    "description": "Show your love of The Office in a way that will also keep you warm.",
+    "amazonUrl": "https://www.amazon.com/gp/product/B00M6FPMOG",
+    "purchaseUrl": "",
+    "category": "clothes",
+    "tags": ["tv/movies", "clothes"],
+    "price": 33
   },
   {
     "title": "Faux Fur Blanket",
@@ -394,6 +370,18 @@
     "category": "sleep",
     "tags": ["sleep", "bedroom"],
     "price": 50
+  },
+  {
+    "title": "Best Ice Cube Trays",
+    "slug": "best-ice-cube-trays",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/71gChwtC5kL._SL1500_.jpg",
+    "image_file": "images/71gChwtC5kL._SL1500_.jpg",
+    "description": "If you make cocktails at home, you need a good big silicone ice cube tray.",
+    "amazonUrl": "https://www.amazon.com/gp/product/B00R03ZCZS",
+    "purchaseUrl": "",
+    "category": "food",
+    "tags": ["drinks", "food"],
+    "price": 10
   },
   {
     "title": "Silicone Food Storage Bags",
@@ -564,16 +552,16 @@
     "price": 48
   },
   {
-    "title": "Hori Hori Garden Knife",
-    "slug": "hori-hori-garden-knife",
-    "image_url": "https://images-na.ssl-images-amazon.com/images/I/71qbRYxuD0L._SL1200_.jpg",
-    "image_file": "images/71qbRYxuD0L._SL1200_.jpg",
-    "description": "Clever knife for pruning and planting. No stabbing plz.",
-    "amazonUrl": "https://www.amazon.com/Garden-Diamond-Sharpening-Thickest-Leather/dp/B016BBM6FI",
+    "title": "Furbo Dog Camera",
+    "slug": "furbo-dog-camera",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/6195c4zLayL._SL1000_.jpg",
+    "image_file": "images/6195c4zLayL._SL1000_.jpg",
+    "description": "Check in on your dog, toss them a treat.",
+    "amazonUrl": "https://www.amazon.com/gp/product/B01FXC7JWQ",
     "purchaseUrl": "",
-    "category": "gardening",
-    "tags": ["gardening", "home"],
-    "price": 29
+    "category": "pets",
+    "tags": ["pets", "dogs"],
+    "price": 200
   },
   {
     "title": "Utter Nonsense",
@@ -588,15 +576,27 @@
     "price": 35
   },
   {
-    "title": "Lavender Grow Kit",
-    "slug": "lavender-grow-kit",
-    "image_url": "https://cdn.shopify.com/s/files/1/0909/2088/products/WP_springflower_1024x1024.jpg",
-    "image_file": "images/WP_springflower_1024x1024.jpg",
-    "description": "Lavender makes everything smell good and plants make a place look good.",
-    "amazonUrl": "",
-    "purchaseUrl": "https://www.modsprout.com/products/waxed-planter-lavender",
-    "category": "home",
-    "tags": ["gardening", "home"],
-    "price": 17
+    "title": "Collapsible Compact Chopsticks",
+    "slug": "collapsible-compact-chopsticks",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/61TfLw5lupL._SL1500_.jpg",
+    "image_file": "images/61TfLw5lupL._SL1500_.jpg",
+    "description": " Full-length chopsticks that collapse into each other.",
+    "amazonUrl": "https://www.amazon.com/exec/obidos/ASIN/B00AWD9LY6/",
+    "purchaseUrl": "",
+    "category": "travel",
+    "tags": ["travel", "food"],
+    "price": 16
+  },
+  {
+    "title": "FURminator Deshedding Tool",
+    "slug": "furminator-deshedding-tool",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/71f2wfqeMDL._SL1500_.jpg",
+    "image_file": "images/71f2wfqeMDL._SL1500_.jpg",
+    "description": "Reduce shedding by getting rid of loose kitty hair.",
+    "amazonUrl": "https://www.amazon.com/gp/product/B00M4PVHH4",
+    "purchaseUrl": "",
+    "category": "pets",
+    "tags": ["cats", "pets"],
+    "price": 45
   }
 ]
