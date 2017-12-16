@@ -14,7 +14,9 @@ class Index extends React.Component {
   state = this.getInitialState()
 
   componentDidMount() {
-    if (isEmpty(this.state.products) && typeof(window) !== "undefined") {
+    const products = get(this, "state.products", {});
+
+    if (isEmpty(products) && typeof(window) !== "undefined") {
       window.location = "/"
     }
   }
@@ -33,7 +35,7 @@ class Index extends React.Component {
   }
 
   getFilterState() {
-    const search = this.props.location.search
+    const search = get(this, "props.location.search", "");
     const params = search.split("?")[1];
     let activeFilter = null;
 
@@ -47,7 +49,8 @@ class Index extends React.Component {
   }
 
   getProducts(productLimit, activeFilter) {
-    let products = this.props.data.allProductsJson.edges.map(e => e.node);
+    const productsData = get(this, "props.data.allProductsJson.edges", [])
+    let products = productsData.map(e => e.node);
 
     // filter
     if (!isEmpty(activeFilter)) {
@@ -109,7 +112,9 @@ class Index extends React.Component {
   }
 
   renderActiveFilter(position) {
-    if (!isEmpty(this.state.activeFilter)) {
+    const activeFilter = get(this, "state.activeFilter");
+
+    if (!isEmpty(activeFilter)) {
       const clickHandler = () => { this.handleClearFilter() }
       return (
         <div className={`active-filters-${position}`}>
@@ -129,7 +134,10 @@ class Index extends React.Component {
   }
 
   renderShowMore() {
-    if (this.state.visibleProductCount < this.state.allProductCount) {
+    const visibleProductCount = get(this, "state.visibleProductCount", 0);
+    const allProductCount = get(this, "state.allProductCount", 0);
+
+    if (visibleProductCount < allProductCount) {
       const clickHandler = () => { this.handleShowMore() }
       return (
         <div className="show-more-container">
