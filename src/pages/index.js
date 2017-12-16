@@ -27,7 +27,7 @@ class Index extends React.Component {
   }
 
   getFilterState() {
-    const search = get(this, "props.location.search", "");
+    const search = this.props.location.search;
     const params = search.split("?")[1];
     let activeFilter = null;
 
@@ -41,7 +41,7 @@ class Index extends React.Component {
   }
 
   getProducts(productLimit, activeFilter) {
-    const productsData = get(this, "props.data.allProductsJson.edges", [])
+    const productsData = this.props.data.allProductsJson.edges;
     let products = productsData.map(e => e.node);
 
     // filter
@@ -109,7 +109,7 @@ class Index extends React.Component {
   }
 
   renderActiveFilter(position) {
-    const activeFilter = get(this, "state.activeFilter");
+    const activeFilter = this.state.activeFilter;
 
     if (!isEmpty(activeFilter)) {
       const clickHandler = () => { this.handleClearFilter() }
@@ -131,8 +131,8 @@ class Index extends React.Component {
   }
 
   renderShowMore() {
-    const visibleProductCount = get(this, "state.visibleProductCount", 0);
-    const allProductCount = get(this, "state.allProductCount", 0);
+    const visibleProductCount = this.state.visibleProductCount;
+    const allProductCount = this.state.allProductCount;
 
     if (visibleProductCount < allProductCount) {
       const clickHandler = () => { this.handleShowMore() }

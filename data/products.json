@@ -540,6 +540,116 @@
     "price": 18
   },
   {
+    "title": "Mr. Potato Head Yoda",
+    "slug": "mr-potato-head-yoda-figure",
+    "image_file": "images/yoda.jpg",
+    "description": "Mr. Potato Head goes green as he dresses up as everyone's favorite Jedi Mash-Ter Yoda!",
+    "amazonUrl": "https://www.amazon.com/Star-Potato-Head-Disney-Figure/dp/B002T3DSGE",
+    "purchaseUrl": "",
+    "category": "toys",
+    "tags": ["toys", "tv/movies"],
+    "price": 20
+  },
+  {
+    "title": "NASA Beanie",
+    "slug": "nasa-beanie",
+    "image_file": "images/beanie.jpg",
+    "description": "Cozy NASA beanie featuring an embroidered worm logo at the cuff.",
+    "amazonUrl": "",
+    "purchaseUrl": "https://www.urbanoutfitters.com/shop/nasa-pom-beanie?category=home-decor-gifts&color=040",
+    "category": "clothes",
+    "tags": ["clothes"],
+    "price": 24
+  },
+  {
+    "title": "Classic Work Gloves",
+    "slug": "classic-work-gloves",
+    "image_file": "images/gloves.jpg",
+    "description": "The original Give’r gloves, built for 100 uses, resilient, rugged and ready for action.",
+    "amazonUrl": "",
+    "purchaseUrl": "https://huckberry.com/store/giver/category/p/45327-classic-give-r-gloves",
+    "category": "clothes",
+    "tags": ["clothes", "outdoors"],
+    "price": 40
+  },
+  {
+    "title": "Myles Everyday Shorts",
+    "slug": "myles-everyday-shorts",
+    "image_file": "images/short.jpg",
+    "description": "The Everyday Short sports a minimalist design with clean lines and a tailored fit",
+    "amazonUrl": "",
+    "purchaseUrl": "https://huckberry.com/store/myles-apparel/category/p/23583-everyday-short",
+    "category": "clothes",
+    "tags": ["clothes"],
+    "price": 58
+  },
+  {
+    "title": "Pendleton Camp Blanket",
+    "slug": "pendleton-camp-blanket",
+    "image_file": "images/blanket.jpg",
+    "description": "Modeled after the blankets early shepherds used to brave the elements of the Pacific Northwest",
+    "amazonUrl": "",
+    "purchaseUrl": "https://www.pendleton-usa.com/product/yakima-camp-blanket-70302.html",
+    "category": "outdoors",
+    "tags": ["house", "outdoors"],
+    "price": 180
+  },
+  {
+    "title": "Geek Dad Book",
+    "slug": "geek-dad-book",
+    "image_file": "images/geekdad.jpg",
+    "description": "Awesomely Geeky Projects and Activities for Dads and Kids to Share",
+    "amazonUrl": "https://www.amazon.com/Geek-Dad-Awesomely-Projects-Activities/dp/B0043RT890",
+    "purchaseUrl": "",
+    "category": "books",
+    "tags": ["books"],
+    "price": 6
+  },
+  {
+    "title": "Super Graphic Book",
+    "slug": "super-graphic-book",
+    "image_file": "images/super.jpg",
+    "description": "A unique look at the intricate and sometimes contradictory storylines that weave their way through comic books",
+    "amazonUrl": "https://www.amazon.com/dp/1452113882/",
+    "purchaseUrl": "",
+    "category": "books",
+    "tags": ["books"],
+    "price": 11
+  },
+  {
+    "title": "Timex Weekender",
+    "slug": "timex-weekender",
+    "image_file": "images/weekender.jpg",
+    "description": "Timex Weekender watch with adjustable 20mm button-stud watchband",
+    "amazonUrl": "",
+    "purchaseUrl": "https://formfunctionform.com/product/button-stud-weekender/",
+    "category": "accessories",
+    "tags": ["accessories"],
+    "price": 98
+  },
+  {
+    "title": "Top Rover Pack",
+    "slug": "top-rover-pack",
+    "image_file": "images/rover.jpg",
+    "description": "The Goldilocks of rucksacks",
+    "amazonUrl": "",
+    "purchaseUrl": "https://topodesigns.com/products/rover-pack/",
+    "category": "accessories",
+    "tags": ["accessories", "outdoors"],
+    "price": 139
+  },
+  {
+    "title": "Stainless Steel Milkshake Straws",
+    "slug": "stainless-steel-milkshake-straws",
+    "image_file": "images/straw.jpg",
+    "description": "Handsome, reusable, extra-long stainless steel drinking straws",
+    "amazonUrl": "https://www.amazon.com/dp/B00CBAPMR8/",
+    "purchaseUrl": "",
+    "category": "kitchen",
+    "tags": ["kitchen"],
+    "price": 9
+  },
+  {
     "title": "Saatchi Art Prints",
     "slug": "saatchi-art-prints",
     "image_url": "http://www.trbimg.com/img-59fa40df/turbine/la-1509572825-h4dmgjy9of-snap-image",
