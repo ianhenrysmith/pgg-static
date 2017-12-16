@@ -13,14 +13,6 @@ const PAGE_SIZE = 30;
 class Index extends React.Component {
   state = this.getInitialState()
 
-  componentDidMount() {
-    const products = get(this, "state.products", {});
-
-    if (isEmpty(products) && typeof(window) !== "undefined") {
-      window.location = "/"
-    }
-  }
-
   getInitialState() {
     const activeFilter = this.getFilterState();
     const products = this.getProducts(PAGE_SIZE, activeFilter);
@@ -66,8 +58,10 @@ class Index extends React.Component {
     }
   }
 
-  handleFilterClick(_, tag) {
+  handleFilterClick(event, tag) {
     const products = this.getProducts(PAGE_SIZE, tag);
+
+    this.props.history.push(`/?activeFilter=${tag}`)
 
     this.setState({
       activeFilter: tag,
@@ -75,6 +69,9 @@ class Index extends React.Component {
       products: products,
       visibleProductCount: products.length
     })
+
+    event.preventDefault();
+    event.stopPropagation();
   }
 
   handleClearFilter() {
@@ -167,6 +164,10 @@ class Index extends React.Component {
   render() {
     const products = this.state.products;
     const productChunks = chunk(products, PAGE_SIZE);
+
+    if (isEmpty(products) && typeof(window) !== "undefined") {
+      window.location = "/"
+    }
 
     return (
       <div>

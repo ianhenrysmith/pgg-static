@@ -28,12 +28,11 @@ class Product extends React.Component {
               map(tags, (tag) => {
                 const clickHandler = (event) => { this.props.onFilterClick(event, tag) }
                 return (
-                  <Link className="product-tag"
-                        to={ `/?activeFilter=${tag}` }
+                  <span className="product-tag"
                         onClick={clickHandler}
                         key={ `tag-${tag}-${slug}` }>
                         {tag}
-                  </Link>
+                  </span>
                 )
               })
             }
