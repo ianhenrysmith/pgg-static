@@ -153,7 +153,7 @@ class Index extends React.Component {
   render() {
     const products = this.state.products;
 
-    if (isEmpty(products)) {
+    if (isEmpty(products) && typeof(window) !== "undefined") {
       window.location = "/"
     }
 

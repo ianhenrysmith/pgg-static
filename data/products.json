@@ -192,6 +192,18 @@
     "price": 29
   },
   {
+    "title": "Salt, Fat, Acid, Heat",
+    "slug": "salt-fat-acid-heat",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/81KG4oBmNqL.jpg",
+    "image_file": "images/81KG4oBmNqL.jpg",
+    "description": "Learn how to build balanced, innovative flavors.",
+    "amazonUrl": "https://smile.amazon.com/gp/product/1476753830/",
+    "purchaseUrl": "",
+    "category": "cooking",
+    "tags": ["books", "cooking"],
+    "price": 20
+  },
+  {
     "title": "Birthstone Necklace",
     "slug": "kendra-scott-birthstone-necklace",
     "image_url": "https://img.buzzfeed.com/buzzfeed-static/static/2017-11/28/14/asset/buzzfeed-prod-fastlane-01/sub-buzz-12190-1511896785-8.jpg",
