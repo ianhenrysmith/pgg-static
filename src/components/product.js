@@ -30,7 +30,8 @@ class Product extends React.Component {
                 return (
                   <Link className="product-tag"
                         to={ `/?activeFilter=${tag}` }
-                        onClick={clickHandler}>
+                        onClick={clickHandler}
+                        key={ `tag-${tag}-${slug}` }>
                         {tag}
                   </Link>
                 )

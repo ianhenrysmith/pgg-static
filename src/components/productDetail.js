@@ -69,7 +69,8 @@ class ProductDetail extends React.Component {
                   map(tags, (tag) => {
                     return (
                       <Link className="product-tag"
-                            to={ `/?activeFilter=${tag}` }>
+                            to={ `/?activeFilter=${tag}` }
+                            key={ `tag-${tag}-${slug}` }>
                         {tag}
                       </Link>
                     )

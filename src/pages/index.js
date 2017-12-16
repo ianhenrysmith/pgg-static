@@ -13,6 +13,12 @@ const PAGE_SIZE = 30;
 class Index extends React.Component {
   state = this.getInitialState()
 
+  componentDidMount() {
+    if (isEmpty(this.state.products) && typeof(window) !== "undefined") {
+      window.location = "/"
+    }
+  }
+
   getInitialState() {
     const activeFilter = this.getFilterState();
     const products = this.getProducts(PAGE_SIZE, activeFilter);
@@ -135,9 +141,9 @@ class Index extends React.Component {
     }
   }
 
-  renderProductChunk(productChunk) {
+  renderProductChunk(productChunk, index) {
     return (
-      <div className="product-chunk">
+      <div className="product-chunk" key={ `product-chunk-${index}` }>
         <div className="product-tiles">
           {
             map(productChunk, (product) => {
@@ -152,11 +158,6 @@ class Index extends React.Component {
 
   render() {
     const products = this.state.products;
-
-    if (isEmpty(products) && typeof(window) !== "undefined") {
-      window.location = "/"
-    }
-
     const productChunks = chunk(products, PAGE_SIZE);
 
     return (
@@ -166,8 +167,8 @@ class Index extends React.Component {
           <div>
             { this.renderActiveFilter("top") }
             {
-              map(productChunks, (productChunk) => {
-                return (this.renderProductChunk(productChunk))
+              map(productChunks, (productChunk, index) => {
+                return (this.renderProductChunk(productChunk, index))
               })
             }
             { this.renderActiveFilter("bottom") }
