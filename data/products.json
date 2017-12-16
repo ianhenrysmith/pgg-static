@@ -650,6 +650,72 @@
     "price": 9
   },
   {
+    "title": "Cadenhead's Old Raj Dry Gin",
+    "slug": "cadenheads-old-raj-dry-gin",
+    "image_file": "images/gin.jpg",
+    "description": "A gin like no other",
+    "amazonUrl": "",
+    "purchaseUrl": "http://www.astorwines.com/SearchResultsSingle.aspx?p=2&search=10210&searchtype=Contains",
+    "category": "food",
+    "tags": ["food", "drinks"],
+    "price": 46
+  },
+  {
+    "title": "Hibiki Japanese Harmony Blended Whisky",
+    "slug": "hikiki-japanese-harmony-blended-whisky",
+    "image_file": "images/whisky.jpg",
+    "description": "The Hibiki range perfectly exemplifies the best and most unique qualities of Japanese whisky",
+    "amazonUrl": "",
+    "purchaseUrl": "http://www.astorwines.com/SearchResultsSingle.aspx?p=2&search=33284",
+    "category": "food",
+    "tags": ["food", "drinks"],
+    "price": 65
+  },
+  {
+    "title": "Rhodia Staplebound Notebook",
+    "slug": "rhodia-staplebound-notebook",
+    "image_file": "images/rhodia.jpg",
+    "description": "Economical notebook for artists & designers",
+    "amazonUrl": "https://www.amazon.com/dp/B001DC7LOC/",
+    "purchaseUrl": "",
+    "category": "art",
+    "tags": ["art", "books"],
+    "price": 65
+  },
+  {
+    "title": "Moshi Digits Touchscreen Winter Gloves",
+    "slug": "moshi-digits-touchscreen-winter-gloves",
+    "image_file": "images/digits.jpg",
+    "description": "Stay warm and connected with Digits.",
+    "amazonUrl": "",
+    "purchaseUrl": "https://www.moshi.com/touch-screen-gloves-digits",
+    "category": "outdoors",
+    "tags": ["clothes", "outdoors"],
+    "price": 30
+  },
+  {
+    "title": "Miir Growler",
+    "slug": "miir-growler",
+    "image_file": "images/growler.jpg",
+    "description": "64 oz. growler",
+    "amazonUrl": "https://www.amazon.com/dp/B071P1Q2SQ/",
+    "purchaseUrl": "",
+    "category": "kitchen",
+    "tags": ["kitchen", "drinks"],
+    "price": 50
+  },
+  {
+    "title": "Baratza Encore Coffee Grinder",
+    "slug": "baratza-encore-coffee-grinder",
+    "image_file": "images/grinder.jpg",
+    "description": "Conical Burr Coffee Grinder",
+    "amazonUrl": "https://www.amazon.com/dp/B007F183LK/",
+    "purchaseUrl": "",
+    "category": "coffee",
+    "tags": ["kitchen", "coffee"],
+    "price": 139
+  },
+  {
     "title": "Saatchi Art Prints",
     "slug": "saatchi-art-prints",
     "image_url": "http://www.trbimg.com/img-59fa40df/turbine/la-1509572825-h4dmgjy9of-snap-image",
