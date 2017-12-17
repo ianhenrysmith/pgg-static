@@ -716,6 +716,50 @@
     "price": 139
   },
   {
+    "title": "Atlas Obscura",
+    "slug": "atlas-obscura",
+    "image_file": "images/atlas.jpg",
+    "description": "An Explorer's Guide to the World's Hidden Wonders",
+    "amazonUrl": "https://www.amazon.com/dp/0761169083/",
+    "purchaseUrl": "",
+    "category": "books",
+    "tags": ["books"],
+    "price": 21
+  },
+  {
+    "title": "Modern Sprout Eco Planter",
+    "slug": "modern-sprout-eco-planter",
+    "image_file": "images/sprout.jpg",
+    "description": "Self-Watering Herb Kit With Organic Seeds",
+    "amazonUrl": "",
+    "purchaseUrl": "https://www.modsprout.com/collections/herb-kits/products/eco-planter-parsley",
+    "category": "house",
+    "tags": ["house", "gardening"],
+    "price": 30
+  },
+  {
+    "title": "Beans72 Organic Buckwheat Pillow",
+    "slug": "beans72-organic-buckwheat-pillow",
+    "image_file": "images/pillow.jpg",
+    "description": "Authentic Japanese Buckwheat Pillow",
+    "amazonUrl": "https://www.amazon.com/dp/B000F1FL9E/",
+    "purchaseUrl": "",
+    "category": "sleep",
+    "tags": ["sleep", "house"],
+    "price": 70
+  },
+  {
+    "title": "Scythe",
+    "slug": "scythe-board-game",
+    "image_file": "images/scythe.jpg",
+    "description": "Scythe is an engine-building, asymmetric, competitive board game set in an alternate-history 1920s period. It is a time of farming and war, broken hearts and rusted gears, innovation and valor.",
+    "amazonUrl": "https://www.amazon.com/dp/B01IPUGYK6/",
+    "purchaseUrl": "",
+    "category": "board games",
+    "tags": ["board games"],
+    "price": 60
+  },
+  {
     "title": "Saatchi Art Prints",
     "slug": "saatchi-art-prints",
     "image_url": "http://www.trbimg.com/img-59fa40df/turbine/la-1509572825-h4dmgjy9of-snap-image",
